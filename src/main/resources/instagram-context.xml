@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans" >
+
+	<bean id="usersRepository" class="com.instagram.application.repository.UserRepository"/>
+	
+	<bean id="profileRepository" class="com.instagram.application.repository.ProfileRepository"/>
+	
+</beans>
