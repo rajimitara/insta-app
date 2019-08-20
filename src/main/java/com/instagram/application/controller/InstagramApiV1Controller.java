@@ -8,6 +8,7 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.instagram.application.api.handler.BusinessDelegate;
 import com.instagram.application.api.handler.Request;
 import com.instagram.application.exception.InstagramApiExceptions;
 import com.instagram.application.model.User;
@@ -20,13 +21,14 @@ public class InstagramApiV1Controller {
 
 	private ApplicationServices applicationService;
 	
+	private BusinessDelegate businessDelegate;
 	//collection
 	
 	@PostMapping(value="/v1/users")
 	public void addUser(@RequestBody String body){
 		try{
 			 Request request = new Request();
-			applicationService.createUser(body);	
+			 businessDelegate.execute(request);	
 		}catch(InstagramApiExceptions ex){
 			
 		}

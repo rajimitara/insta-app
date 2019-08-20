@@ -10,6 +10,8 @@ public class Request {
 	
 	public HttpHeaders httpHeaders;
 	
+	public String body;
+	
 	public enum InstaClient{
 		FACEBOOK
 	}
